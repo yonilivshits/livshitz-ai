@@ -194,21 +194,21 @@ export default function Hero() {
             className="flex-shrink-0 w-full max-w-md lg:max-w-lg">
             
             {/* Terminal window */}
-            <div className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden shadow-2xl shadow-black/50 hidden">
-              {/* Title bar */}
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/50 hidden">
-                <div className="w-3 h-3 rounded-full bg-destructive/70" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                <div className="w-3 h-3 rounded-full bg-primary/70" />
-                <span className="font-mono text-xs text-muted-foreground mr-auto">system.init.js</span>
-              </div>
-              {/* Code area */}
-              <div className="p-5 space-y-3 min-h-[160px] hidden">
-                {TYPING_LINES.map((line, i) =>
-                <TerminalLine key={i} line={line} startDelay={line.delay + 600} />
-                )}
-              </div>
-            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
             {/* GIF below terminal */}
             <div className="mt-4 flex justify-center">
