@@ -214,7 +214,7 @@ export default function Hero() {
             <div className="mt-4 flex justify-center">
               <div className="w-56 h-56 md:w-72 md:h-72">
                 <img
-                  src="https://media.base44.com/images/public/69f81e40fcd63302d3cc609c/11510dac8_download2.gif"
+                  src="https://canva.link/hk3ecxkjbkjgrxp"
                   alt="AI animation"
                   className="w-full h-full object-contain"
                   style={{ mixBlendMode: "screen" }}
