@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 const TYPING_LINES = [
-  { text: "const system = new ERP({ customized: true });", delay: 0 },
-  { text: "system.automate('procurement', 'hr', 'reporting');", delay: 800 },
-  { text: "system.connect('realtime_dashboard');", delay: 1600 },
-  { text: "// חיסכון של 50%+ בשעות עבודה ✓", delay: 2400, green: true },
-];
+{ text: "const system = new ERP({ customized: true });", delay: 0 },
+{ text: "system.automate('procurement', 'hr', 'reporting');", delay: 800 },
+{ text: "system.connect('realtime_dashboard');", delay: 1600 },
+{ text: "// חיסכון של 50%+ בשעות עבודה ✓", delay: 2400, green: true }];
+
 
 function TerminalLine({ line, startDelay }) {
   const [displayed, setDisplayed] = useState("");
@@ -35,11 +35,11 @@ function TerminalLine({ line, startDelay }) {
     <div className={`font-mono text-sm leading-relaxed ${line.green ? "text-primary" : "text-foreground/70"}`}>
       <span className="text-primary/50 mr-3 select-none">›</span>
       {displayed}
-      {displayed.length < line.text.length && started && (
-        <span className="inline-block w-2 h-4 bg-primary ml-0.5 animate-pulse align-middle" />
-      )}
-    </div>
-  );
+      {displayed.length < line.text.length && started &&
+      <span className="inline-block w-2 h-4 bg-primary ml-0.5 animate-pulse align-middle" />
+      }
+    </div>);
+
 }
 
 function ParticleCanvas() {
@@ -63,7 +63,7 @@ function ParticleCanvas() {
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.4,
       vy: (Math.random() - 0.5) * 0.4,
-      r: Math.random() * 1.5 + 0.5,
+      r: Math.random() * 1.5 + 0.5
     }));
 
     const draw = () => {
@@ -121,9 +121,9 @@ export default function Hero() {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(rgba(74,222,128,1) 1px, transparent 1px), linear-gradient(90deg, rgba(74,222,128,1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
+          backgroundSize: "60px 60px"
+        }} />
+      
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-24 pt-32">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
@@ -134,8 +134,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8"
-            >
+              className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8">
+              
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="font-mono text-primary text-xs tracking-widest">NO-CODE · ERP · CRM · AI</span>
             </motion.div>
@@ -144,8 +144,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-heebo font-black text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
-            >
+              className="font-heebo font-black text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
+              
               המערכת צריכה
               <br />
               <span className="text-primary">להסתגל אליך</span>
@@ -157,8 +157,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="font-heebo font-light text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl"
-            >
+              className="font-heebo font-light text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
+              
               אני בונה לעסקים מערכות ERP ו-CRM מותאמות אישית, שחוסכות שעות עבודה,
               מבטלות ניירת מיותרת, ונותנות לך תמונה בזמן אמת של מה שקורה בעסק.
             </motion.p>
@@ -167,19 +167,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
-            >
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+              
               <a
                 href="#contact"
-                className="group relative bg-primary text-primary-foreground font-heebo font-bold px-8 py-3.5 rounded-xl text-base hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 overflow-hidden"
-              >
+                className="group relative bg-primary text-primary-foreground font-heebo font-bold px-8 py-3.5 rounded-xl text-base hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 overflow-hidden">
+                
                 <span className="relative z-10">בואו נדבר</span>
                 <div className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
               </a>
               <a
                 href="#pains"
-                className="text-muted-foreground font-heebo font-medium flex items-center gap-2 hover:text-foreground transition-colors duration-200 text-sm"
-              >
+                className="text-muted-foreground font-heebo font-medium flex items-center gap-2 hover:text-foreground transition-colors duration-200 text-sm">
+                
                 <ArrowDown className="w-4 h-4" />
                 גלה עוד
               </a>
@@ -191,22 +191,22 @@ export default function Hero() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="flex-shrink-0 w-full max-w-md lg:max-w-lg"
-          >
+            className="flex-shrink-0 w-full max-w-md lg:max-w-lg">
+            
             {/* Terminal window */}
-            <div className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+            <div className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden shadow-2xl shadow-black/50 hidden">
               {/* Title bar */}
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/50">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/50 hidden">
                 <div className="w-3 h-3 rounded-full bg-destructive/70" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
                 <div className="w-3 h-3 rounded-full bg-primary/70" />
                 <span className="font-mono text-xs text-muted-foreground mr-auto">system.init.js</span>
               </div>
               {/* Code area */}
-              <div className="p-5 space-y-3 min-h-[160px]">
-                {TYPING_LINES.map((line, i) => (
-                  <TerminalLine key={i} line={line} startDelay={line.delay + 600} />
-                ))}
+              <div className="p-5 space-y-3 min-h-[160px] hidden">
+                {TYPING_LINES.map((line, i) =>
+                <TerminalLine key={i} line={line} startDelay={line.delay + 600} />
+                )}
               </div>
             </div>
 
@@ -217,8 +217,8 @@ export default function Hero() {
                   src="https://media.base44.com/images/public/69f81e40fcd63302d3cc609c/11510dac8_download2.gif"
                   alt="AI animation"
                   className="w-full h-full object-contain"
-                  style={{ mixBlendMode: "screen" }}
-                />
+                  style={{ mixBlendMode: "screen" }} />
+                
               </div>
             </div>
           </motion.div>
@@ -226,6 +226,6 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-    </section>
-  );
+    </section>);
+
 }
