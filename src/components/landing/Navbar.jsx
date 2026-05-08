@@ -13,9 +13,9 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "הכאבים", href: "#pains" },
+    { label: "כאבים", href: "#pains" },
     { label: "הסיפור שלי", href: "#story" },
-    { label: "התהליך", href: "#process" },
+    { label: "תהליך", href: "#process" },
     { label: "יתרונות", href: "#benefits" },
     { label: "צור קשר", href: "#contact" },
   ];
@@ -24,13 +24,16 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-primary-foreground font-heebo font-bold text-xl tracking-tight">
-          יונתן ליבשיץ
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center">
+            <span className="font-mono text-primary font-bold text-sm">YL</span>
+          </div>
+          <span className="font-heebo font-bold text-foreground text-base">יונתן ליבשיץ</span>
         </a>
 
         {/* Desktop */}
@@ -39,17 +42,24 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-heebo font-medium transition-colors duration-200"
+              className="text-muted-foreground hover:text-foreground text-sm font-heebo font-medium transition-colors duration-200"
             >
               {link.label}
             </a>
           ))}
         </div>
 
+        <a
+          href="#contact"
+          className="hidden md:flex bg-primary/10 border border-primary/30 text-primary font-heebo font-medium text-sm px-5 py-2 rounded-lg hover:bg-primary/20 transition-all duration-200"
+        >
+          בואו נדבר
+        </a>
+
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-foreground"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -62,7 +72,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-primary/95 backdrop-blur-md border-t border-primary-foreground/10"
+            className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {links.map((link) => (
@@ -70,7 +80,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-primary-foreground/80 hover:text-primary-foreground text-base font-heebo font-medium transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-base font-heebo font-medium transition-colors py-1"
                 >
                   {link.label}
                 </a>

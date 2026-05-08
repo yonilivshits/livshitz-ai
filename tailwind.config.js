@@ -6,6 +6,7 @@ module.exports = {
   	extend: {
   		fontFamily: {
   			heebo: ['var(--font-heebo)'],
+  			mono: ['var(--font-mono)'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
