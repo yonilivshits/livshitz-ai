@@ -213,7 +213,7 @@ export default function Hero() {
             {/* GIF below terminal */}
             <div className="mt-4 flex justify-center">
               <div className="w-56 h-56 md:w-72 md:h-72">
-                <img src="https://media.base44.com/videos/public/69f81e40fcd63302d3cc609c/6456849b7___.mp4"
+                <img src="https://media.base44.com/images/public/69f81e40fcd63302d3cc609c/907208fe5_____2_.gif"
 
                 alt="AI animation"
                 className="w-full h-full object-contain"
