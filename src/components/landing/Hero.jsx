@@ -137,7 +137,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8">
               
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="font-mono text-primary text-xs tracking-widest hidden">NO-CODE · ERP · CRM · AI</span>
+              
             </motion.div>
 
             <motion.h1
