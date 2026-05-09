@@ -47,7 +47,7 @@ export default function Benefits() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16">
           
-          <span className="font-mono text-primary tracking-[0.3em] uppercase block mb-4 text-sm font-bold"> למה לבחור בי
+          <span className="font-mono text-primary tracking-[0.3em] block mb-4 text-sm font-bold lowercase"> למה לבחור בי
 
           </span>
           <h2 className="font-heebo font-black text-3xl md:text-4xl text-foreground">
